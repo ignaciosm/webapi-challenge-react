@@ -11,7 +11,7 @@ function App() {
   });
 
   useEffect(()=>{
-    axios.get('https://cors-anywhere.herokuapp.com/https://webapi-back.herokuapp.com/projects')
+    axios.get('https://webapi-back.herokuapp.com/projects')
     .then(res => {
       setProjects(res.data)
     })
@@ -27,7 +27,7 @@ function App() {
 
   const handleSumbit = e => {
     e.preventDefault();
-    axios.post("https://cors-anywhere.herokuapp.com/https://webapi-back.herokuapp.com/projects", newP )
+    axios.post("https://webapi-back.herokuapp.com/projects", newP )
     .then(res => {
       setNewP(res.data)
     })
